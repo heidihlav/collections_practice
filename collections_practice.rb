@@ -34,10 +34,20 @@ end
 
 def find_a(array)
   array.find_all do |word|
-    word[0] = "a"
+    word[0] == "a"
   end
 end
 
+def sum_array(array)
+  array.sum
+end
 
-
+def add_s(array)
+  add_s =[]
+  array.each do |word|
+    add_s << word + "s" unless array[1]
+    add_s
+  binding.pry
+end
+end
 #      binding.pry
