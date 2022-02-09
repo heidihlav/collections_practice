@@ -42,12 +42,13 @@ def sum_array(array)
   array.sum
 end
 
+
 def add_s(array)
-  add_s =[]
-  array.each do |word|
-    add_s << word + "s" unless array[1]
-    add_s
-  binding.pry
-end
-end
-#      binding.pry
+  array.collect do |word| 
+    if array[1] == word
+      word
+    else
+      word + "s"
+    end 
+  end
+end 
